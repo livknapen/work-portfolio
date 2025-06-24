@@ -25,31 +25,37 @@ export default function Home() {
         <ProjectCard
           titel="AI-Weirdness"
           beschrijving="Een project waarbij er een presedientele verkiezing is tussen mens en AI."
-          afbeelding="/projecten/refresco.jpg"
+          afbeelding="./images/ai-weirdness.png"
           link="https://jouwprojectlink.nl"
         />
         <ProjectCard
           titel="Project Auto verhuur in Curacao"
           beschrijving="Herontwerp van de website met betere usability en moderne stijl."
-          afbeelding="/projecten/escapetalk.jpg"
+          afbeelding="./images/autohurencaracao.png"
           link="https://jouwandereproject.nl"
         />
         <ProjectCard
           titel="ProjectX Three.js"
           beschrijving="Een website waarbij ik gebruik maak van Three.js voor 3D visualisaties."
-          afbeelding="/projecten/escapetalk.jpg"
+          afbeelding="./images/threejs.png"
           link="https://jouwandereproject.nl"
         />
         <ProjectCard
           titel="Project Brand a Band"
           beschrijving="Een passende stijl en branding voor een opkomende band."
-          afbeelding="/projecten/escapetalk.jpg"
+          afbeelding="./images/bab.png"
           link="https://jouwandereproject.nl"
         />
         <ProjectCard
           titel="Dashboard vernieuwen voor Escapetalk"
           beschrijving="Herontwerp van het dashboard met betere usability en moderne stijl."
-          afbeelding="/projecten/escapetalk.jpg"
+          afbeelding="./images/escapetalk-dashboard.png"
+          link="https://jouwandereproject.nl"
+        />
+        <ProjectCard
+          titel="Mind Feelings"
+          beschrijving="Work in progress: een website voor kinder- tiener coaching."
+          afbeelding="./images/mindfeelings.png"
           link="https://jouwandereproject.nl"
         />
       </div>
