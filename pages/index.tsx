@@ -9,7 +9,7 @@ export default function Home() {
     <main className={styles.main}>
       <section id="hello" className={styles.section}>
         <div className={styles.intro}>
-          <h1>Hallo.<br />Ik ben Liv Knapen.</h1>
+          <h1>Hallo,<br />Ik ben <span className={styles["gradient-name"]}>Liv Knapen.</span></h1>
           <p>Student ICT & Media Design<br />met een passie voor design en front-end development.</p>
         </div>
         <div className={styles.imageBox}>

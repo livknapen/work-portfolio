@@ -1,11 +1,47 @@
+import { useEffect, useState } from 'react';
 import styles from './ScrollNav.module.css';
 
+const sections = ['hello', 'projecten', 'contact'];
+
 export default function ScrollNav() {
+  const [active, setActive] = useState<string>('hello');
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      if (!section) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActive(id);
+          }
+        },
+        { rootMargin: '-50% 0px -50% 0px' }
+      );
+
+      observer.observe(section);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((obs) => obs.disconnect());
+    };
+  }, []);
+
   return (
     <nav className={styles.nav}>
-      <a href="#hello" className={styles.dot}></a>
-      <a href="#projecten" className={styles.dot}></a>
-      <a href="#contact" className={styles.dot}></a>
+      {sections.map((id) => (
+        <a
+          key={id}
+          href={`#${id}`}
+          className={active === id ? styles.active : ''}
+        >
+          {id === 'hello' ? 'Home' : id.replace('-', ' ').replace(/^\w/, c => c.toUpperCase())}
+        </a>
+      ))}
     </nav>
   );
 }
