@@ -1,0 +1,48 @@
+.contact {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #f4f4f4, #eaeaea);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.link:hover {
+  color: #0070f3;
+  transform: translateX(6px);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
