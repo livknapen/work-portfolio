@@ -18,7 +18,9 @@ export default function Home() {
       </section>
 
       <section id="projecten" style={{ padding: '4rem 2rem', background: '#f9f9f9' }}>
-      <h2 style={{ textAlign: 'center' }}>Mijn Projecten</h2>
+      <div className={styles.projectTitleWrapper}>
+        <h2 className={styles.projectTitle}>Mijn Projecten</h2>
+      </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', marginTop: '2rem' }}>
         <ProjectCard
           titel="AI-Weirdness"

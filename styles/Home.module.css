@@ -42,10 +42,48 @@
 }
 
 .gradient-name {
-  background: linear-gradient(90deg, #659dfd, #544bfa); /* pas kleuren aan naar wens */
+  background: linear-gradient(90deg, #659dfd, #544bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
+
+.projectTitleWrapper {
+  text-align: center;
+}
+
+.projectTitle {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #659dfd, #544bfa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: start;
+    padding: 2rem 1rem;
+  }
+
+  .projectTitle {
+    font-size: 2rem;
+  }
+
+  .portrait {
+    max-width: 200px;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
 
