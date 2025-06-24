@@ -2,14 +2,14 @@ import styles from '../styles/Home.module.css';
 import ScrollNav from '../components/ScrollNav';
 import ProjectCard from '../components/ProjectCard';
 import ContactSection from '../components/ContactSection';
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Home() {
   return (
+<>
     <main className={styles.main}>
       <section id="hello" className={styles.section}>
         <div className={styles.intro}>
-          <h1>Hello.<br />I’m Liv Knapen.</h1>
+          <h1>Hallo.<br />Ik ben Liv Knapen.</h1>
           <p>Student ICT & Media Design<br />met een passie voor design en front-end development.</p>
         </div>
         <div className={styles.imageBox}>
@@ -57,5 +57,6 @@ export default function Home() {
 
     <ScrollNav />
     </main>
+    </>
   );
 }
