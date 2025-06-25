@@ -1,7 +1,22 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function CustomCursor() {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // pas aan indien nodig
+    };
+
+    checkMobile(); // bij laden
+    window.addEventListener('resize', checkMobile); // bij resizen
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     const cursor = document.querySelector('.custom-cursor') as HTMLElement;
     let mouseX = 0;
     let mouseY = 0;
@@ -28,10 +43,10 @@ export default function CustomCursor() {
     window.addEventListener('mousemove', handleMouseMove);
     animate();
 
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return <div className="custom-cursor" />;
 }

@@ -1,6 +1,7 @@
 .nav {
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
   width: 100%;
   background-color: white;
   border-top: 1px solid #ddd;

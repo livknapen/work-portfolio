@@ -4,7 +4,7 @@ import styles from './ScrollNav.module.css';
 const sections = ['hello', 'projecten', 'over-mij', 'contact'];
 
 export default function ScrollNav() {
-  const [active, setActive] = useState<string>('hello');
+  const [active, setActive] = useState('hello');
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -19,7 +19,7 @@ export default function ScrollNav() {
             setActive(id);
           }
         },
-        { threshold: 0.5 }
+        { rootMargin: '-30% 0px -30% 0px' }
       );
 
       observer.observe(section);
