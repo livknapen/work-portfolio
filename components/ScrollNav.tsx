@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './ScrollNav.module.css';
 
-const sections = ['hello', 'projecten', 'contact'];
+const sections = ['hello', 'projecten', 'over-mij', 'contact'];
 
 export default function ScrollNav() {
   const [active, setActive] = useState<string>('hello');
@@ -19,7 +19,7 @@ export default function ScrollNav() {
             setActive(id);
           }
         },
-        { rootMargin: '-50% 0px -50% 0px' }
+        { threshold: 0.5 }
       );
 
       observer.observe(section);

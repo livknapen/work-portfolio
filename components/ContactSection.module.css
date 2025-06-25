@@ -1,7 +1,7 @@
 .contact {
   padding: 5rem 2rem;
-  background: linear-gradient(to bottom, #f4f4f4, #eaeaea);
   text-align: center;
+  background-color: #f9f9f9;
 }
 
 .title {
@@ -30,7 +30,7 @@
   background-color: white;
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
