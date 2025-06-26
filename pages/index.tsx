@@ -13,7 +13,7 @@ export default function Home() {
       <Background />
       <section id="hello" className={styles.section}>
         <div className={`${styles.intro} ${styles.fadeInUp}`}>
-          <h1>Hallo,<br />Ik ben <span className={styles["gradient-name"]}>Liv Knapen.</span></h1>
+          <h1>Hey,<br />Ik ben <span className={styles["gradient-name"]}>Liv Knapen.</span></h1>
           <h3>Student ICT & Media Design<br />met een passie voor design en front-end development.</h3>
         </div>  
         <div className={styles.imageBox}>
@@ -24,12 +24,12 @@ export default function Home() {
               className={`${styles.portrait} ${styles.fadeInLeft}`}
             />
             <img
-              src="./images/image-design.png"
+              src="./images/image copy.png"
               alt="CSS Preview"
               className={`${styles.overlayBox} ${styles.fadeInLeft}`}
             />
             <img
-              src="./images/image-develop.png"
+              src="./images/image copy 2.png"
               alt="Image Settings"
               className={`${styles.overlayBox} ${styles.fadeInLeft}`}
             />
@@ -47,42 +47,42 @@ export default function Home() {
           titel="AI-Weirdness"
           beschrijving="Een project waarbij er een presedientele verkiezing is tussen mens en AI."
           afbeelding="./images/ai-weirdness.png"
-          link="https://jouwprojectlink.nl"
+          slug="ai-weirdness"
           tags={["Design", "Creative Coding", "Vue.js"]}
         />
         <ProjectCard
           titel="Project Auto verhuur in Curacao"
           beschrijving="Herontwerp van de website met betere usability en moderne stijl."
           afbeelding="./images/autohurencaracao.png"
-          link="https://jouwandereproject.nl"
+          slug="project-auto-verhuur-curacao"
           tags={["Design", "Creative Coding"]}
         />
         <ProjectCard
           titel="ProjectX Three.js"
           beschrijving="Een website waarbij ik gebruik maak van Three.js voor 3D visualisaties."
           afbeelding="./images/threejs.png"
-          link="https://jouwandereproject.nl"
+          slug="projectx-threejs"
           tags={["Creative Coding", "Three.js"]}
         />
         <ProjectCard
           titel="Project Brand a Band"
           beschrijving="Een passende stijl en branding voor een opkomende band."
           afbeelding="./images/bab.png"
-          link="https://jouwandereproject.nl"
+          slug="project-brand-a-band"
           tags={["Design", "Branding"]}
         />
         <ProjectCard
           titel="Escapetalk Dashboard"
           beschrijving="Herontwerp van het dashboard met betere usability en moderne stijl."
           afbeelding="./images/escapetalk-dashboard.png"
-          link="https://jouwandereproject.nl"
+          slug="escapetalk-dashboard"
           tags={["Design", "Creative Coding", "SASS"]}
         />
         <ProjectCard
           titel="Mind Feelings"
-          beschrijving="Work in progress: een website voor kinder- tiener coaching."
+          beschrijving="Work in progress: een website voor kinder- en tienercoaching."
           afbeelding="./images/mindfeelings.png"
-          link="https://jouwandereproject.nl"
+          slug="mind-feelings"
           tags={["Design"]}
         />
       </div>
@@ -100,7 +100,7 @@ export default function Home() {
         <div className={styles.aboutContent}>
         <h2 className={styles.projectTitle}>Design en Development</h2>
         <p>
-          Mijn favoriete tools zijn Figma, HTML/CSS, JavaScript en frameworks zoals React of Vue.
+          Mijn favoriete tools zijn Figma, HTML/CSS, JavaScript en frameworks zoals React of Vue. Ook het werken met SASS en Tailwind CSS vind ik fijn.
           Daarnaast werk ik graag aan visuele details, animatie en responsive design voor een soepele gebruikerservaring.
         </p>
       </div>

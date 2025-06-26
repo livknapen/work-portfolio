@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import styles from './ScrollNav.module.css';
 
 const sections = ['hello', 'projecten', 'over-mij', 'contact'];
 
 export default function ScrollNav() {
   const [active, setActive] = useState('hello');
+  const router = useRouter();
+  const currentPath = router.pathname;
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -36,10 +39,10 @@ export default function ScrollNav() {
       {sections.map((id) => (
         <a
           key={id}
-          href={`#${id}`}
+          href={currentPath === '/' ? `#${id}` : `/#${id}`}
           className={active === id ? styles.active : ''}
         >
-          {id === 'hello' ? 'Home' : id.replace('-', ' ').replace(/^\w/, c => c.toUpperCase())}
+          {id === 'hello' ? 'Home' : id.replace('-', ' ').replace(/^\w/, (c) => c.toUpperCase())}
         </a>
       ))}
     </nav>
