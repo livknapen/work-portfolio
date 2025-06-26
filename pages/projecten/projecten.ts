@@ -40,7 +40,7 @@ export const projecten = [
     titel: 'Escapetalk Dashboard',
     beschrijving: 'Herontwerp van het dashboard met betere usability en moderne stijl.',
     inhoud: 'Hier schrijf je een lange uitleg over het project met visuals, uitdagingen en oplossingen.',
-    afbeelding: '/images/escapetalk-groot.png',
+    afbeeldingen: ['/images/escapetalk-groot.png'],
     tags: ['Design', 'Creative Coding', 'SASS'],
     github: 'https://github.com/livknapen/Escapetalk-dashboard.git'
   },
@@ -49,7 +49,7 @@ export const projecten = [
     titel: 'Mind Feelings',
     beschrijving: 'Work in progress: een website voor kinder- en tienercoaching.',
     inhoud: 'Hier schrijf je een lange uitleg over het project met visuals, uitdagingen en oplossingen.',
-    afbeelding: '/images/mindfeelings.png',
+    afbeeldingen: ['/images/mindfeelings.png'],
     tags: ['Design'],
   }
 ];

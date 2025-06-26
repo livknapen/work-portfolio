@@ -114,7 +114,25 @@
   margin: 0;
 }
 
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  min-height: 80vh;
+}
+
+.aboutContent {
+  max-width: 800px;
+  margin-left: 3rem;
+  text-align: start;
+  padding: 6.2rem 0;
+}
+
 @media (max-width: 768px) {
+  .intro {
+    margin-left: 1rem;
+  }
+
   .section {
     flex-direction: column;
     text-align: start;
@@ -147,24 +165,8 @@
     bottom: -10%;
     right: -20%;
   }
+
+  .aboutContent {
+  margin-left: 0;
 }
-
-
-.aboutSection {
-  padding: 5rem 2rem;
-  min-height: 80vh;
-}
-
-.aboutContent {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 6.2rem 0;
-}
-
-.aboutContent p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  color: #333;
 }

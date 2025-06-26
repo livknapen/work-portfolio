@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styles from './ProjectCard.module.css';
+import Link from "next/link";
+import styles from "./ProjectCard.module.css";
 
 type Props = {
   titel: string;
@@ -9,7 +9,13 @@ type Props = {
   tags: string[];
 };
 
-export default function ProjectCard({ titel, beschrijving, afbeelding, slug, tags }: Props) {
+export default function ProjectCard({
+  titel,
+  beschrijving,
+  afbeelding,
+  slug,
+  tags,
+}: Props) {
   return (
     <div className={styles.card}>
       <img src={afbeelding} alt={titel} className={styles.image} />
@@ -18,7 +24,9 @@ export default function ProjectCard({ titel, beschrijving, afbeelding, slug, tag
         <p className={styles.desc}>{beschrijving}</p>
         <div className={styles.tags}>
           {tags.map((tag, index) => (
-            <span key={index} className={styles.tag}>{tag}</span>
+            <span key={index} className={styles.tag}>
+              {tag}
+            </span>
           ))}
         </div>
         <div className={styles.buttonWrapper}>

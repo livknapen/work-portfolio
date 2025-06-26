@@ -33,28 +33,26 @@ export default function ProjectPagina() {
         )}
 
         {project.video ? (
-        <video
+          <video
             src={project.video}
             className={styles.video}
             autoPlay
             loop
             muted
             playsInline
-        />
+          />
         ) : project.afbeeldingen ? (
-        <div className={styles.gallery}>
+          <div className={styles.gallery}>
             {project.afbeeldingen.map((src, index) => (
-            <img
+              <img
                 key={index}
                 src={src}
                 alt={`${project.titel} afbeelding ${index + 1}`}
                 className={styles.galleryImage}
-            />
+              />
             ))}
-        </div>
+          </div>
         ) : null}
-
-
       </main>
       <ScrollNav />
     </>
