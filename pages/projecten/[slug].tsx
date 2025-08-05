@@ -16,6 +16,9 @@ export default function ProjectPagina() {
   return (
     <>
       <CustomCursor />
+      <button onClick={() => router.back()} className={styles.backButton}>
+          ← Terug
+        </button>
       <main className={styles.container}>
         <h1 className={styles.title}>{project.titel}</h1>
         <p className={styles.content}>{project.inhoud}</p>

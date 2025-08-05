@@ -34,6 +34,7 @@
   bottom: 20%;
   right: 5%;
   animation-delay: 5s;
+  background: linear-gradient(90deg, #ffb5b5, #fa4b4b);
 }
 
 .circle3 {

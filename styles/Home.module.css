@@ -43,7 +43,7 @@
 
 .overlayBox {
   position: absolute;
-  max-width: 20%;
+  max-width: 30%;
   z-index: 2;
   opacity: 0;
   transform: translateX(-50px);
@@ -128,6 +128,43 @@
   padding: 6.2rem 0;
 }
 
+.aboutSection {
+  padding: 5rem 2rem;
+}
+
+.aboutContentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.textBlock {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.aboutContent {
+  max-width: 700px;
+  text-align: start;
+}
+
+.imageBox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImage {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .intro {
     margin-left: 1rem;
@@ -168,5 +205,21 @@
 
   .aboutContent {
   margin-left: 0;
+  }
+
+  .aboutContentWrapper {
+    flex-direction: column;
+  }
+
+  .imageBox {
+    margin-top: 2rem;
+  }
+
+  .aboutContent {
+    text-align: center;
+  }
+
+  .aboutImage {
+  max-width: 200px;
 }
 }

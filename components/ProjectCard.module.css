@@ -39,12 +39,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  color: #544bfa;
+  color: #fa4b4b;
 }
 
 .tag {
-  background-color: #eef1ff;
-  color: #659dfd;
+  background-color: #fff2f2;
+  color: #fa4b4b;
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.3rem 0.6rem;

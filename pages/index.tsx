@@ -20,7 +20,7 @@ export default function Home() {
               <span className={styles["gradient-name"]}>Liv Knapen.</span>
             </h1>
             <h3>
-              Student ICT & Media Design
+              ICT & Media Designer
               <br />
               met een passie voor design en front-end development.
             </h3>
@@ -33,12 +33,12 @@ export default function Home() {
                 className={`${styles.portrait} ${styles.fadeInLeft}`}
               />
               <img
-                src="./images/image copy.png"
+                src="./images/pc-1.png"
                 alt="CSS Preview"
                 className={`${styles.overlayBox} ${styles.fadeInLeft}`}
               />
               <img
-                src="./images/image copy 2.png"
+                src="./images/pc-2.png"
                 alt="Image Settings"
                 className={`${styles.overlayBox} ${styles.fadeInLeft}`}
               />
@@ -111,25 +111,40 @@ export default function Home() {
         </section>
 
         <section id="over-mij" className={styles.aboutSection}>
-          <div className={styles.aboutContent}>
-            <h2 className={styles.projectTitle}>Over mij</h2>
-            <h3>
-              Ik ben Liv Knapen, een student ICT & Media Design met een passie
-              voor design en front-end development. Ik hou van het creëren van
-              interactieve, gebruiksvriendelijke interfaces en ben altijd op
-              zoek naar manieren om techniek en creativiteit samen te brengen.
-            </h3>
-          </div>
-          <div className={styles.aboutContent}>
-            <h2 className={styles.projectTitle}>Design en Development</h2>
-            <h3>
-              Mijn favoriete tools zijn Figma, HTML/CSS, JavaScript en
-              frameworks zoals React of Vue. Ook het werken met SASS en Tailwind
-              CSS gaat me goed af. Daarnaast werk ik graag aan visuele details,
-              animatie en responsive design voor een soepele gebruikerservaring.
-            </h3>
+          <div className={styles.aboutContentWrapper}>
+            <div className={styles.textBlock}>
+              <div className={styles.aboutContent}>
+                <h2 className={styles.projectTitle}>Over mij</h2>
+                <h3>
+                  Ik ben Liv Knapen, een ICT & Media Designer met een passie
+                  voor design en front-end development. Ik hou van het creëren van
+                  interactieve, gebruiksvriendelijke interfaces en ben altijd op zoek
+                  naar manieren om techniek en creativiteit samen te brengen.
+                </h3>
+              </div>
+
+              <div className={styles.aboutContent}>
+                <h2 className={styles.projectTitle}>Design en Development</h2>
+                <h3>
+                  Mijn favoriete tools zijn Figma, HTML/CSS, JavaScript en frameworks
+                  zoals React of Vue. Ook het werken met SASS en Tailwind CSS gaat me
+                  goed af. Daarnaast werk ik graag aan visuele details, animatie en
+                  responsive design voor een soepele gebruikerservaring.
+                </h3>
+              </div>
+            </div>
+
+            <div className={styles.imageBox}>
+              <img
+                src="/images/phone-1.png"
+                alt="Phone Design"
+                className={styles.aboutImage}
+              />
+            </div>
           </div>
         </section>
+
+
 
         <ContactSection />
 
