@@ -43,7 +43,7 @@
 
 .overlayBox {
   position: absolute;
-  max-width: 30%;
+  max-width: 20%;
   z-index: 2;
   opacity: 0;
   transform: translateX(-50px);
@@ -52,7 +52,7 @@
 }
 
 .overlayBox:nth-of-type(2) {
-  top: 0%;
+  top: -5%;
   left: 7%;
 }
 

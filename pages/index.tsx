@@ -33,13 +33,13 @@ export default function Home() {
                 className={`${styles.portrait} ${styles.fadeInLeft}`}
               />
               <img
-                src="./images/pc-1.png"
-                alt="CSS Preview"
+                src="./images/develop.png"
+                alt="Develop"
                 className={`${styles.overlayBox} ${styles.fadeInLeft}`}
               />
               <img
-                src="./images/pc-2.png"
-                alt="Image Settings"
+                src="./images/design.png"
+                alt="Design"
                 className={`${styles.overlayBox} ${styles.fadeInLeft}`}
               />
             </div>
