@@ -4,24 +4,42 @@ import styles from "../../styles/ProjectPagina.module.css";
 import ScrollNav from "../../components/ScrollNav";
 import CustomCursor from "../../components/CustomCursor";
 import { FaGithub } from "react-icons/fa";
+import DOMPurify from "isomorphic-dompurify";
 
 export default function ProjectPagina() {
   const router = useRouter();
   const { slug } = router.query;
 
-  const project = projecten.find((p) => p.slug === slug);
+  const slugStr = Array.isArray(slug) ? slug[0] : slug;
+  const project = projecten.find((p) => p.slug === slugStr);
 
   if (!project) return <p>Project niet gevonden...</p>;
+
+  // inhoud kan string of string[] zijn → normaliseren
+  const inhoud: string = Array.isArray(project.inhoud)
+    ? project.inhoud.join("\n\n")
+    : (project.inhoud ?? "");
+
+  const safeHtml = DOMPurify.sanitize(inhoud, { USE_PROFILES: { html: true } });
 
   return (
     <>
       <CustomCursor />
       <button onClick={() => router.back()} className={styles.backButton}>
-          ← Terug
-        </button>
+        ← Terug
+      </button>
       <main className={styles.container}>
         <h1 className={styles.title}>{project.titel}</h1>
-        <p className={styles.content}>{project.inhoud}</p>
+
+        {project.beschrijving && (
+          <p className={styles.desc}>{project.beschrijving}</p>
+        )}
+
+        {/* HTML-inhoud met enters, bold, etc. */}
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: safeHtml }}
+        />
 
         {project.github && (
           <a
@@ -46,11 +64,11 @@ export default function ProjectPagina() {
           />
         ) : project.afbeeldingen ? (
           <div className={styles.gallery}>
-            {project.afbeeldingen.map((src, index) => (
+            {project.afbeeldingen.map((src, i) => (
               <img
-                key={index}
+                key={i}
                 src={src}
-                alt={`${project.titel} afbeelding ${index + 1}`}
+                alt={`${project.titel} afbeelding ${i + 1}`}
                 className={styles.galleryImage}
               />
             ))}
