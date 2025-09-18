@@ -18,7 +18,6 @@ export const projecten = [
               <p><strong>Resultaat:</strong><br>
               Een interactieve, toekomstgerichte campagne-ervaring die gebruikers meeneemt in een fictieve presidentsverkiezing op de maan. Met een consistente visuele stijl, heldere user flow en werkende Vue.js-implementatie is dit project een combinatie van design, UX en development.</p>
               `,
-    video: '/images/ai-weirdness-trailer.mp4',
     afbeeldingen: ['/images/ai-weirdness-groot.png', '/images/ai-weirdness-voting.png'],
     tags: ['Vue.js', 'Creative Coding'],
     github: 'https://github.com/livknapen/ai-weirdness.git'
